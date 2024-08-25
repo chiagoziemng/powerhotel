@@ -98,7 +98,7 @@
           <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
             <ul class="nav navbar-nav menu_nav">
               <li class="nav-item active"><a class="nav-link" href="index.html">Home</a></li>
-              <li class="nav-item"><a class="nav-link" href="#room">Room</a></li>
+              <li class="nav-item"><a class="nav-link" href="room.html">Room</a></li>
               <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
               <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
             </ul>
@@ -230,28 +230,58 @@
           </div>
   
           <div class="row">
-            {% for category in categories %}
             <div class="col-md-6 col-xl-4 mb-5">
-              <div class="card card-explore">
-                <div class="card-explore__img">
-                  {% if category.image %}
-                      <img class="card-img" src="{{ category.image.url }}" alt="{{ category.category.room_type }} Image">
-                  {% else %}
-                      <!-- Handle the case when no image is available -->
-                  {% endif %}
-                </div>
-                <div class="card-body">
-                  <h3 class="card-explore__price">₦{{ category.base_price }} <sub>/ Per Night</sub></h3>
-                  <h4 class="card-explore__title">{{ category.room_type }}</h4>
-                  <p>{{ category.description }}</p>
-                  <a class="card-explore__link" href="{% url 'reserve_room'%}">Book Now <i class="ti-arrow-right"></i></a>
-                  {% comment %} <a href="{% url 'category_rooms' category.id %}">{{ category.room_type }}</a> {% endcomment %}
+                <div class="card card-explore">
+                  <div class="card-explore__img">
+                    <img class="card-img" src="img/ui.jpeg" alt="">
+                  </div>
+                  <div class="card-body">
+                    <h3 class="card-explore__price">₦20,425<sub>/ Per Night</sub></h3>
+                    <h4 class="card-explore__title"><a href="#">Royale room                    </a></h4>
+                    <p>
+                        Indulge in the epitome of luxury and sophistication in our Royale Room. With its exquisite design and unrivaled comfort, this room is designed to make your stay truly exceptional.
+
+                    </p>
+                    <a class="card-explore__link" href="#">Book Now <i class="ti-arrow-right"></i></a>
+                  </div>
                 </div>
               </div>
-            </div>
-            {% empty %}
-            <li>No categories available.</li>
-          {% endfor %}
+          
+              <div class="col-md-6 col-xl-4 mb-5">
+                <div class="card card-explore">
+                  <div class="card-explore__img">
+                    <img class="card-img" src="img/p6.jpg" alt="">
+                  </div>
+                  <div class="card-body">
+                    <h3 class="card-explore__price">₦18,500 <sub>/ Per Night</sub></h3>
+                    <h4 class="card-explore__title"><a href="#">
+                        Deluxe room
+                    </a></h4>
+                    <p>
+                        Experience utmost comfort and style in our Deluxe Room. Thoughtfully designed with your relaxation in mind, this room offers a perfect blend of modern amenities and a soothing ambiance.
+                    </p>
+                    <a class="card-explore__link" href="#">Book Now <i class="ti-arrow-right"></i></a>
+                  </div>
+                </div>
+              </div>
+          
+              <div class="col-md-6 col-xl-4 mb-5">
+                <div class="card card-explore">
+                  <div class="card-explore__img">
+                    <img class="card-img" src="img/144k.jpeg" alt="">
+                  </div>
+                  <div class="card-body">
+                    <h3 class="card-explore__price">₦7,500 <sub>/ Per Night</sub></h3>
+                    <h4 class="card-explore__title"><a href="#">
+                        Studio room
+                    </a></h4>
+                    <p>
+                        Welcome to our cozy and functional Studio Room. Designed for the modern traveler, this room offers a comfortable and efficient space to relax, work, and recharge.
+                    </p>
+                    <a class="card-explore__link" href="#">Book Now <i class="ti-arrow-right"></i></a>
+                  </div>
+                </div>
+              </div> 
           </div>
         </div>
       </section>

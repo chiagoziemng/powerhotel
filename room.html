@@ -1,6 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
+    <!-- SEO Meta Tags -->
+<meta name="description" content="Power         Mike - Providing excellent hospitality services to families, individuals, and corporate organizations.">
+<meta name="keywords" content="Travel, Tours, powermike, Corporate Travel, Family Travel, Travel Services">
+<meta name="author" content="Power Mike  Hotel">
+<meta name="robots" content="index, follow">
+
+<!-- Open Graph Meta Tags for Social Media -->
+<meta property="og:title" content="Asogworld Travel & Tours">
+<meta property="og:description" content="We are established to provide excellent hospitality services to prospective clients families, individuals, coporate organization.">
+<meta property="og:url" content="https://powermike.netlify.app/">
+<meta property="og:image" content="img/land/p1.jpg">
+<meta property="og:type" content="website">
+
+
+<!-- Twitter Card Meta Tags -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="powermike Hotel">
+<meta name="twitter:description" content="We are established to provide excellent hospitality services to prospective clients, families, individuals, and corporate organizations.">
+<meta name="twitter:image" content="https://powermike.netlify.app/">
+<meta name="twitter:site" content="@powermike">
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -69,7 +91,7 @@
           <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
             <ul class="nav navbar-nav menu_nav">
               <li class="nav-item active"><a class="nav-link" href="index.html">Home</a></li>
-              <li class="nav-item"><a class="nav-link" href="#room">Room</a></li>
+              <li class="nav-item"><a class="nav-link" href="room.html">Room</a></li>
               <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
               <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
             </ul>
@@ -190,34 +212,17 @@
 <div class="container">
   <div class="section-intro text-center pb-80px">
     <div class="section-intro__style">
-      <img src="{%  static 'frontend/img/home/bed-icon.png' %}" alt="">
+      <img src="img/home/bed-icon.png" alt="">
     </div>
     <h2>Explore Our Rooms</h2>
   </div>
 
   <div class="row pb-4">
-    {% for category in categories %}
-    <div class="col-md-6 col-xl-4 mb-5">
-      <div class="card card-explore">
-        <div class="card-explore__img">
-          <img class="card-img" src="{{ category.image.url }}" alt="{{ category.room_type }} Image">
-        </div>
-        <div class="card-body">
-          <h3 class="card-explore__price">₦{{ category.base_price }} <sub>/ Per Night</sub></h3>
-          <h4 class="card-explore__title"><a href="#">{{ category.room_type }}</a></h4>
-          <p>{{ category.description }}</p>
-          <a class="card-explore__link" href="#">Book Now <i class="ti-arrow-right"></i></a>
-        </div>
-      </div>
-    </div>
-    {% empty %}
-    <li>No categories available.</li>
-  {% endfor %}
 
-    {% comment %} <div class="col-md-6 col-xl-4 mb-5">
+   <div class="col-md-6 col-xl-4 mb-5">
       <div class="card card-explore">
         <div class="card-explore__img">
-          <img class="card-img" src="{%  static 'frontend/img/home/explore2.png' %}" alt="">
+          <img class="card-img" src="img/home/explore2.png" alt="">
         </div>
         <div class="card-body">
           <h3 class="card-explore__price">$170.00 <sub>/ Per Night</sub></h3>
@@ -231,7 +236,7 @@
     <div class="col-md-6 col-xl-4 mb-5">
       <div class="card card-explore">
         <div class="card-explore__img">
-          <img class="card-img" src="{%  static 'frontend/img/home/explore3.png' %}" alt="">
+          <img class="card-img" src="img/home/explore3.png" alt="">
         </div>
         <div class="card-body">
           <h3 class="card-explore__price">$190.00 <sub>/ Per Night</sub></h3>
@@ -240,12 +245,12 @@
           <a class="card-explore__link" href="#">Book Now <i class="ti-arrow-right"></i></a>
         </div>
       </div>
-    </div> {% endcomment %}
+    </div>
 
-    {% comment %} <div class="col-md-6 col-xl-4 mb-5">
+    <div class="col-md-6 col-xl-4 mb-5">
       <div class="card card-explore">
         <div class="card-explore__img">
-          <img class="card-img" src="{%  static 'frontend/img/home/explore4.png' %}" alt="">
+          <img class="card-img" src="img/home/explore4.png" alt="">
         </div>
         <div class="card-body">
           <h3 class="card-explore__price">$120.00 <sub>/ Per Night</sub></h3>
@@ -259,7 +264,7 @@
     <div class="col-md-6 col-xl-4 mb-5">
       <div class="card card-explore">
         <div class="card-explore__img">
-          <img class="card-img" src="{%  static 'frontend/img/home/explore5.png' %}" alt="">
+          <img class="card-img" src="img/home/explore5.png" alt="">
         </div>
         <div class="card-body">
           <h3 class="card-explore__price">$130.00 <sub>/ Per Night</sub></h3>
@@ -273,7 +278,7 @@
     <div class="col-md-6 col-xl-4 mb-5">
       <div class="card card-explore">
         <div class="card-explore__img">
-          <img class="card-img" src="{%  static 'frontend/img/home/explore6.png' %}" alt="">
+          <img class="card-img" src="img/home/explore6.png" alt="">
         </div>
         <div class="card-body">
           <h3 class="card-explore__price">$150.00 <sub>/ Per Night</sub></h3>
@@ -282,7 +287,7 @@
           <a class="card-explore__link" href="#">Book Now <i class="ti-arrow-right"></i></a>
         </div>
       </div>
-    </div> {% endcomment %}
+    </div> 
   </div>
 </div>
 </section>
